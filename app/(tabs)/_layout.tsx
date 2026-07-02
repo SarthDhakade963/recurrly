@@ -8,18 +8,18 @@ import { colors, components } from '@/constants/theme';
 
 const tabBar = components.tabBar
 
-
-const TabsLayout = () => {
-  const insets = useSafeAreaInsets()
-  const TabIcon = ({ focused, icon }: TabIconProps) => {
-    return (
+const TabIcon = ({ focused, icon }: TabIconProps) => {
+   return (
       <View className='tabs-icon'> 
         <View className={clsx('tabs-pill', focused && 'tabs-active')}>
           <Image source={icon} className="tabs-glyph" />
         </View>
       </View>
     )
-  }
+}
+
+const TabsLayout = () => {
+  const insets = useSafeAreaInsets()
   
     return (
       <Tabs screenOptions={{
@@ -41,14 +41,14 @@ const TabsLayout = () => {
         tabBarIconStyle: {
           width: tabBar.iconFrame,
           height: tabBar.iconFrame,
-          alignItems: 'center',
-          color: 'white'
+          alignItems: 'center'
         }
       }}>
         {
           tabs.map(
             (tab) => (
               <Tabs.Screen
+                key={tab.name}
                 name={tab.name}
                 options={
                   {

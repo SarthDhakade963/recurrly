@@ -1,4 +1,6 @@
 import dayjs from "dayjs";
+import { SafeAreaView as RNSafeAreaView} from "react-native-safe-area-context";
+import {styled} from 'nativewind'
 
 export const formatCurrency = (value: number, currency = "USD"): string => {
   try {
@@ -23,3 +25,5 @@ export const formatStatusLabel = (value?: string): string => {
   if (!value) return "Unknown";
   return value.charAt(0).toUpperCase() + value.slice(1);
 };
+
+export const SafeAreaView = styled(RNSafeAreaView)
