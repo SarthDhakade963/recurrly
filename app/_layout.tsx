@@ -8,7 +8,7 @@ export default function RootLayout() {
     'sans-regular': require('../assets/fonts/PlusJakartaSans-Regular.ttf'),
     'sans-bold': require('../assets/fonts/PlusJakartaSans-Bold.ttf'),
     'sans-medium': require('../assets/fonts/PlusJakartaSans-Medium.ttf'),
-    'sans-extrabold': require('../assets/fonts/PlusJakartaSans-Extrabold.ttf'),
+    'sans-extrabold': require('../assets/fonts/PlusJakartaSans-ExtraBold.ttf'),
     'sans-light': require('../assets/fonts/PlusJakartaSans-Light.ttf'),
   })
 
@@ -19,7 +19,7 @@ export default function RootLayout() {
   }, [fontsLoaded])
 
   if (!fontsLoaded) return null;
-  
+
   return <Stack screenOptions={{ headerShown: false}}/>;
 }
 
